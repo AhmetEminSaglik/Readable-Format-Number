@@ -13,7 +13,7 @@ class ReadableFormatTest {
     @Test
     public void testNegativeIntegerNumberReadeableFormat() {
         int[] intArr = {-1, -12, -123, -1234, -12345, -123456, -1234567, -12345678, -123456789, -1234567890};
-        String[] readableStringText = {"1", "-12", "-123", "-1_234", "-12_345", "-123_456", "-1_234_567", "-12_345_678", "-123_456_789", "-1_234_567_890"};
+        String[] readableStringText = {"-1", "-12", "-123", "-1_234", "-12_345", "-123_456", "-1_234_567", "-12_345_678", "-123_456_789", "-1_234_567_890"};
         assertEquals(intArr.length, readableStringText.length, "Given integer array and String array length are not equals");
 
         for (int i = 0; i < intArr.length; i++) {
