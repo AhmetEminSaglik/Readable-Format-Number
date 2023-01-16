@@ -1,4 +1,6 @@
-package org.ahmeteminsaglik;
+package org.ahmeteminsaglik.readableformat;
+
+import org.ahmeteminsaglik.utility.Utility;
 
 public class ReadableFormat {
 
