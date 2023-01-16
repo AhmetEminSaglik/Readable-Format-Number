@@ -1,63 +1,25 @@
 package org.ahmeteminsaglik;
 
-
 public class ReadableFormat {
 
     public static String getStringValue(int num) {
-        if (num==0) {
-            return "0";
-        }
-
-        boolean isNumNegative = false;
-        if (num < 0) {
-            isNumNegative = true;
-            num *= -1;
-        }
-
-
-        String text = "";
-        int j = 0;
-        while (num > 0) {
-            text = num % 10 + text;
-            num /= 10;
-            j++;
-            if (j % 3 == 0 && num > 0) {
-                text = "_" + text;
-            }
-
-        }
-        if (isNumNegative) {
-            text = "-" + text;
-        }
-        return text;
+        String numberText = Utility.convertIntegerToString(num);
+        return Utility.getProcessedNumberText(numberText);
     }
 
     public static String getStringValue(long num) {
-
-        if (num==0) {
-            return "0";
-        }
-        boolean isNumNegative = false;
-        if (num < 0) {
-            isNumNegative = true;
-            num *= -1;
-        }
-
-
-        String text = "";
-        int j = 0;
-        while (num > 0) {
-            text = num % 10 + text;
-            num /= 10;
-            j++;
-            if (j % 3 == 0 && num > 0) {
-                text = "_" + text;
-            }
-        }
-
-        if (isNumNegative) {
-            text = "-" + text;
-        }
-        return text;
+        String numberText = Utility.convertLongToString(num);
+        return Utility.getProcessedNumberText(numberText);
     }
+
+    public static String getStringValue(double num) {
+        String numText = Utility.convertDoubleToString(num);
+        return Utility.getProcessedNumbersHavingDecimal(numText);
+    }
+
+    public static String getStringValue(float num) {
+        String numText = Utility.convertFloatToString(num);
+        return Utility.getProcessedNumbersHavingDecimal(numText);
+    }
+
 }
