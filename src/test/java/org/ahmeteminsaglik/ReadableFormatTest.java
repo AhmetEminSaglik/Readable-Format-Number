@@ -307,4 +307,24 @@ class ReadableFormatTest {
         }
 
     }
+
+    @Test
+    @DisplayName("Object Test")
+    @Order(13)
+    public void testObjectDataNumberReadeableFormat() {
+        List<Object> objectList = new ArrayList<>();
+        objectList.add("abc");
+        objectList.add("abcd");
+        objectList.add("123456");
+//        objectList.add(123.1012f);
+//        objectList.add(12345);
+        String[] readableStringText = {"abc", "a_bcd", "123_456", "123.101_2", "12_345"};
+        for (int i = 0; i < objectList.size(); i++) {
+            String expected = readableStringText[i];
+            String actual = ReadableFormat.getStringValue(objectList.get(i));
+            String errMsg = "Object value must return as " + expected + ". But it return like " + actual + " i : " + i;
+            assertEquals(expected, actual, errMsg);
+        }
+
+    }
 }

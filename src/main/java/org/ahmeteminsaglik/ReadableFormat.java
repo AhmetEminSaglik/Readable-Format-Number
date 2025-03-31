@@ -26,4 +26,9 @@ public class ReadableFormat {
         return Utility.getProcessedNumbersHavingDecimal(numText);
     }
 
+    public static String getStringValue(Object object) {
+        if (object == null) return null;
+        return Utility.getProcessedNumberText(object.toString());
+    }
+
 }
