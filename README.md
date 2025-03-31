@@ -1,4 +1,5 @@
-# Readable Format integer long value
+# Readable Format integer long value 
+[![](https://jitpack.io/v/AhmetEminSaglik/Readable-Format-Number.svg)](https://jitpack.io/#AhmetEminSaglik/Readable-Format-Number)
 
 This project is created to read better big digit numbers.
 Let's give a short example.
@@ -56,5 +57,5 @@ How to import library ?
     <version>v1.3</version>
 </dependency>
 ```
-Example dependency add Screenshot:
+Dependency example screenshot:
 !["images/dependency-add-example.png"](images/dependency-add-example.png) <br><br>
